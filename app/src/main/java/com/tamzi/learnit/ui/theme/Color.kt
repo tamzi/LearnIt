@@ -5,13 +5,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.compositeOver
 
-
 /*
     We set out the various theme colours for our shades of dark and light theme
     We will modify these
 
 */
-
 
 /*Theme 1: IndigoTheme:*/
 val indigo = Color(0xFF654D67)
@@ -27,7 +25,7 @@ val black = Color(0xFF131313)
 /*Theme 3: MinimalistTheme*/
 val gray = Color(0xFFEFEFEF)
 val deepGray = Color(0xFFE6E4E6)
-val darkGray = Color( 0xFF83829A)
+val darkGray = Color(0xFF83829A)
 val lightGray = Color(0xFFF6F6F6)
 
 /*
@@ -50,7 +48,6 @@ val yellowish = Color(0xffffc000)
 val darkYellow = Color(0xffffde03)
 val yellowDarkPrimary = Color(0xff242316)
 val limeGreenish = Color(0xFF4ABB00)
-
 
 
 /**

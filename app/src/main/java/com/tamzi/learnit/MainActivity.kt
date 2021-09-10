@@ -11,17 +11,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.tamzi.learnit.ui.theme.LearnItTheme
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            LearnItTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
-        }
-    }
 }
 
 @Composable
@@ -32,7 +21,5 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    LearnItTheme {
-        Greeting("Android")
-    }
+
 }

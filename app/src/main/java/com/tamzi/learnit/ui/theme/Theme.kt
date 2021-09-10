@@ -6,10 +6,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 
-
 private val YebluThemeLight = lightColors(
-    primary = darkYellow ,
-    primaryVariant = darkYellow ,
+    primary = darkYellow,
+    primaryVariant = darkYellow,
     onPrimary = black,
     secondary = blueish,
     secondaryVariant = darkerBlue,
@@ -92,7 +91,6 @@ fun RedTheme(
 }
 
 
-
 private val MinimalistThemeLight = lightColors(
     primary = gray,
     secondary = darkGray,
@@ -119,7 +117,6 @@ fun MinimalistTheme(
     }
     LearnItTheme(darkTheme, colors, content)
 }
-
 
 
 /*
