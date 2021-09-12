@@ -3,7 +3,11 @@ package com.tamzi.learnit.ui.theme
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import com.tamzi.learnit.ui.theme.LearnItTheme.shapes
+import com.tamzi.learnit.ui.theme.LearnItTheme.typography
 
 
 private val YebluThemeLight = lightColors(
@@ -118,12 +122,15 @@ fun MinimalistTheme(
     LearnItTheme(darkTheme, colors, content)
 }
 
+private val LightElevation = Elevation ()
+
+private val DarkElevation = Elevation (card = 2.dp)
 
 /*
     LearnItTheme:
     This is a custom theme but is extended from material design.
 
-    It cosnsits of: mimimalist,REd and
+    It consits of: mimimalist,REd and indigo
  */
 @Composable
 private fun LearnItTheme(
@@ -131,8 +138,21 @@ private fun LearnItTheme(
     colors: Colors,
     content: @Composable () -> Unit
 ) {
+    val elevation = if (darkTheme) DarkElevation else LightElevation
+    CompositionLocalProvider(
+        LocalElevations provides elevation,
+    ) {
+        MaterialTheme(
+            colors = colors,
+            typography = typography,
+            shapes = shapes,
+            content = content
+        )
+        
+    }
 
 }
+
 
 
 object LearnItTheme {
@@ -149,5 +169,10 @@ object LearnItTheme {
     val shapes: Shapes
         @Composable
         get() = MaterialTheme.shapes
+
+    val elevations: Elevation
+        @Composable
+        get() = LocalElevations.current
+
 
 }
